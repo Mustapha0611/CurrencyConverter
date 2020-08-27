@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Currency converter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Currency.css'>
+    <script type="text/javascript">
+        function convert() {
+          var select1 = document.getElementById("select1");
+          var select2 = document.getElementById("select2");
+          var vale = document.getElementById("txt").value; 
+          var Tonaira = vale*382;
+          var Todollar = vale/382;
+          var ptd = vale*1.3207;
+          var ptn = vale*509.941;
+          var dtp = vale/1.3207;
+          var ntp = vale/509.941;
+          if (select1.options[select1.selectedIndex].value =="dollar" && select2.options[select2.selectedIndex].value =="naira" ) {
+            var score = document.getElementById("scr").innerHTML = "New value: " + Tonaira.toFixed(2) +" Naira";
+          } else if(select1.options[select1.selectedIndex].value == "naira" && select2.options[select2.selectedIndex].value == "dollar"){
+            var score = document.getElementById("scr").innerHTML = "New value: " + Todollar.toFixed(2) +" Dollars";
+          }
+         else if(select1.options[select1.selectedIndex].value == "pounds" && select2.options[select2.selectedIndex].value == "dollar"){
+            var score = document.getElementById("scr").innerHTML = "New value: " + ptd.toFixed(4) +" Dollars";
+          }
+         else if(select1.options[select1.selectedIndex].value == "naira" && select2.options[select2.selectedIndex].value == "pounds"){
+            var score = document.getElementById("scr").innerHTML = "New value: " + ntp.toFixed(3) +" Pounds";
+          }
+          else if(select1.options[select1.selectedIndex].value == "pounds" && select2.options[select2.selectedIndex].value == "naira"){
+            var score = document.getElementById("scr").innerHTML = "New value: " + ptn.toFixed(3) +" Naira";
+          }
+          else if(select1.options[select1.selectedIndex].value == "dollar" && select2.options[select2.selectedIndex].value == "pounds"){
+            var score = document.getElementById("scr").innerHTML = "New value: " + dtp.toFixed(3) +" Pounds";
+          }
+        }
+    </script>
+</head>
+<body>
+  <div>
+      <p>Currency Converter</p>
+      <select id="select1">
+          <option value="naira">Naira</option>
+          <option value="dollar">Dollar</option>
+          <option value="pounds">Pounds</option>
+
+      </select>
+      <select id="select2">
+        <option value="naira">Naira</option>
+        <option value="dollar">Dollar</option>
+        <option value="pounds">Pounds</option>
+    </select><br><br>
+      <input type="text" placeholder="Enter Amount" id="txt" required='' >
+      <br>
+       <h3 id="scr">New value:</h3>
+      <button onclick="convert()" id="bt1">Convert</button>
+  </div>
+  <h2>&copy; MUSTEEY</h2>
+</body>
+</html>
