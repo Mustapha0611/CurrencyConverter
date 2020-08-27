@@ -44,7 +44,7 @@ p{
     color: rgb(255, 255, 255);
     transition: 0.3s;
 }
-input[type = "number"]{
+input[type = "text"]{
     background-color: rgba(11, 30, 87, 0.74);
     width: 140px;
     border-radius: 10px;
@@ -125,7 +125,7 @@ h2{
         color: rgb(255, 255, 255);
         transition: 0.3s;
     }
-    input[type = "number"]{
+    input[type = "text"]{
         background-color: rgba(11, 30, 87, 0.74);
         width: 140px;
         border-radius: 10px;
