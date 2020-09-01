@@ -11,28 +11,28 @@
           var select1 = document.getElementById("select1");
           var select2 = document.getElementById("select2");
           var vale = document.getElementById("txt").value; 
-          var Tonaira = vale*386.72;
-          var Todollar = vale/386.72;
-          var ptd = vale*1.3207;
-          var ptn = vale*509.941;
-          var dtp = vale/1.3207;
-          var ntp = vale/509.941;
+          var Tonaira = vale*386.39;
+          var Todollar = vale/386.39;
+          var ptd = vale*0.75;
+          var ptn = vale*517.22;
+          var dtp = vale/0.75;
+          var ntp = vale/517.22;
           if (select1.options[select1.selectedIndex].value =="dollar" && select2.options[select2.selectedIndex].value =="naira" ) {
             var score = document.getElementById("scr").innerHTML = "New value: " + Tonaira.toFixed(2) +" Naira";
           } else if(select1.options[select1.selectedIndex].value == "naira" && select2.options[select2.selectedIndex].value == "dollar"){
             var score = document.getElementById("scr").innerHTML = "New value: " + Todollar.toFixed(2) +" Dollars";
           }
          else if(select1.options[select1.selectedIndex].value == "pounds" && select2.options[select2.selectedIndex].value == "dollar"){
-            var score = document.getElementById("scr").innerHTML = "New value: " + ptd.toFixed(4) +" Dollars";
+            var score = document.getElementById("scr").innerHTML = "New value: " + ptd.toFixed(2) +" Dollars";
           }
          else if(select1.options[select1.selectedIndex].value == "naira" && select2.options[select2.selectedIndex].value == "pounds"){
-            var score = document.getElementById("scr").innerHTML = "New value: " + ntp.toFixed(3) +" Pounds";
+            var score = document.getElementById("scr").innerHTML = "New value: " + ntp.toFixed(2) +" Pounds";
           }
           else if(select1.options[select1.selectedIndex].value == "pounds" && select2.options[select2.selectedIndex].value == "naira"){
-            var score = document.getElementById("scr").innerHTML = "New value: " + ptn.toFixed(3) +" Naira";
+            var score = document.getElementById("scr").innerHTML = "New value: " + ptn.toFixed(2) +" Naira";
           }
           else if(select1.options[select1.selectedIndex].value == "dollar" && select2.options[select2.selectedIndex].value == "pounds"){
-            var score = document.getElementById("scr").innerHTML = "New value: " + dtp.toFixed(3) +" Pounds";
+            var score = document.getElementById("scr").innerHTML = "New value: " + dtp.toFixed(2) +" Pounds";
           }
         }
     </script>
